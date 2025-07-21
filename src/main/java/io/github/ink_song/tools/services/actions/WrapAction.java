@@ -1,12 +1,14 @@
 package io.github.ink_song.tools.services.actions;
 
-public class WrapAction implements Action {
-  String prefix;
-  String suffix;
+import java.util.List;
 
-  public WrapAction(String prefix, String suffix) {
-    this.prefix = prefix;
-    this.suffix = suffix;
+public class WrapAction implements Action {
+  String prefix = "";
+  String suffix = "";
+
+  public WrapAction(List<String> prefsuf) {
+    prefix = prefsuf.get(0);
+    suffix = prefsuf.get(1);
   }
 
   @Override
