@@ -16,4 +16,8 @@ public class ActionRegistry {
     return actions.get(input).create(args);
   }
 
+  public Boolean contains(String input) {
+    return actions.containsKey(input);
+  }
+
 }
