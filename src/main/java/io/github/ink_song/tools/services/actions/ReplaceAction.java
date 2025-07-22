@@ -1,5 +1,7 @@
 package io.github.ink_song.tools.services.actions;
 
+import java.util.regex.Pattern;
+
 public class ReplaceAction implements Action {
   private final String find;
   private final String replace;
@@ -11,6 +13,6 @@ public class ReplaceAction implements Action {
 
   @Override
   public String apply(String input) {
-    return input.replace(find, replace);
+    return input.replaceAll("(?i)"+ Pattern.quote(find), replace);
   }
 }
