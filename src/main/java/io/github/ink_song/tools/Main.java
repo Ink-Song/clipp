@@ -31,9 +31,6 @@ public class Main {
       System.out.println(e.getMessage());
     }
 
-    System.out.println(input);
-
-
     //clipboard.setContents(new StringSelection(results), null);
 
   }
