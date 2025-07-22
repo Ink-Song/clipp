@@ -10,6 +10,8 @@ public class ActionRegistry {
     actions.put("lowercase", args -> new LowercaseAction());
     actions.put("uppercase", args -> new UppercaseAction());
     actions.put("wrap", new WrapActionFactory());
+    actions.put("insertbefore", new InsertBeforeActionFactory());
+    actions.put("insertafter", new InsertAfterActionFactory());
   }
 
   public Action get(String input, List<String> args) {
