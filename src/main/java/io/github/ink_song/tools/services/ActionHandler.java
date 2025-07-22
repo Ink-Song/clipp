@@ -10,7 +10,7 @@ public class ActionHandler {
   private final ActionRegistry actionRegistry = new ActionRegistry();
   private final TargetRegistry targetRegistry = new TargetRegistry();
 
-  public boolean handle(List<List<String>> commands, String input) {
+  public String handle(List<List<String>> commands, String input) {
     for (List<String> commandBlock : commands) {
       String action = commandBlock.getFirst();
       String target = commandBlock.get(1);
@@ -26,6 +26,8 @@ public class ActionHandler {
       input = new Dispatcher()
           .apply(actionRegistry.get(action,arguments), targetRegistry.get(target), input);
 
+
     }
+    return input;
   }
 }

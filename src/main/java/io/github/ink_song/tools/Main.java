@@ -24,7 +24,8 @@ public class Main {
     ActionHandler actionHandler = new ActionHandler();
 
     try {
-      actionHandler.handle(commands, input);
+      String output = actionHandler.handle(commands, input);
+      clipboard.setContents(new StringSelection(output), null);
       System.out.println("Finished.");
     } catch (IllegalArgumentException e) {
       System.out.println(e.getMessage());
