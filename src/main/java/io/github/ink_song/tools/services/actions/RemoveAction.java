@@ -1,12 +1,12 @@
 package io.github.ink_song.tools.services.actions;
 
-public class RemoveFirstAction implements Action {
+public class RemoveAction implements Action {
   private final String target;
-  public RemoveFirstAction(String target) {
+  public RemoveAction(String target) {
     this.target = target;
   }
   @Override
   public String apply(String input) {
-    return input.replaceFirst(target, "");
+    return input.replace(target, "");
   }
 }

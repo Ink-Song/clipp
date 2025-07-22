@@ -12,6 +12,8 @@ public class ActionRegistry {
     actions.put("wrap", new WrapActionFactory());
     actions.put("insertbefore", new InsertBeforeActionFactory());
     actions.put("insertafter", new InsertAfterActionFactory());
+    actions.put("remove", new RemoveActionFactory());
+    actions.put("replace", new ReplaceActionFactory());
   }
 
   public Action get(String input, List<String> args) {
